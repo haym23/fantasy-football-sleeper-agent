@@ -1,15 +1,21 @@
 # Leagues API
 
-The Sleeper Leagues API provides league configuration, scoring settings, rosters, and matchups.
+The Sleeper Leagues API provides access to league configuration, rosters, matchups, transactions, and playoff brackets. All endpoints are read-only.
 
-## Concepts
+## Endpoints
 
-- League endpoints (pending)
-- League schema (pending)
-- [Lineup eligibility rules](./lineup-eligibility.md) (pending)
-- [Scoring settings](./scoring-settings.md) (pending)
+* [League Endpoints](./endpoint.md) - HTTP routes for retrieving leagues, rosters, users, matchups, brackets, and transactions.
 
-## Related
+## Schema & Reference
 
-- [Players](../players/index.md) — player information for roster and lineup decisions
-- [Drafts](../drafts/index.md) — draft records for a league
+* [League Object Schema](./league-schema.md) - Field definitions for individual league objects.
+* [Roster Object Schema](./roster-schema.md) - Roster (team) composition, players, and stats.
+* [Matchup Object Schema](./matchup-schema.md) - Weekly head-to-head pairings and scores.
+* [Transaction Object Schema](./transaction-schema.md) - Free agent pickups, waiver claims, and trades.
+* [Playoff Bracket Schema](./bracket-schema.md) - Winners and losers bracket matchup structure.
+* [League Status and State](./state-reference.md) - Enum values for status and season_type; league lifecycle.
+* [League Settings and Scoring](./settings-reference.md) - Configuration objects and stat scoring multilpliers.
+
+## Implementation
+
+* [League Data Storage](./league-storage.md) - Schema, queries, and operations for storing leagues in SQLite.
