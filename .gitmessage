@@ -1,0 +1,26 @@
+# <type>[optional scope]: <description>
+#
+# Type: feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert
+# Scope: area/module affected (optional, wrap in parens if present)
+#
+# Description: one-line summary in present tense, imperative mood, max 72 chars
+#
+# --- Optional: Commit body (multi-paragraph explanation) ---
+# [Explain why the change is being made, not just what changed.
+#  Line-wrap at 72 chars. One blank line between paragraphs.]
+#
+# --- Optional: Footers (issues, breaking changes) ---
+# Closes #123
+# Refs #456
+# BREAKING CHANGE: [description of backward-incompatible changes]
+#
+# --- Examples ---
+# feat(players): add Sleeper Players API knowledge bundle
+# docs(sleeper/players): restructure into OKF format with 5 concepts
+# chore: configure git commit template
+#
+# Remember:
+# - One logical change per commit
+# - Present tense: "add", not "added"
+# - Imperative: "fix bug", not "fixes bug"
+# - Reference issues when applicable
