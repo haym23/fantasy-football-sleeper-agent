@@ -105,33 +105,11 @@ The `scoring_settings` field maps NFL stats to point multipliers:
 - **best_ball:** 1 means no lineup management needed; scores are auto-optimized. Useful for one-and-done leagues.
 - **scoring_settings:** Some leagues may have null values for unused stats. Always handle gracefully (default to 0).
 
-## Common League Types
+## Common Settings Patterns
 
-### Re-Draft (1QB, PPR)
-
-```
-max_keepers: 0
-playoff_teams: 6
-waiver_type: 1 (rolling)
-pass_td: 4, rec: 1, rec_yd: 0.1
-```
-
-### PPR Dynasty (12-team, FAAB)
-
-```
-max_keepers: null (dynasty = all kept)
-playoff_teams: 6
-waiver_type: 0 (FAAB with $$ budget)
-pass_yd: 0.04, pass_td: 4, rec: 1, rec_yd: 0.1
-```
-
-### Best-Ball
-
-```
-best_ball: 1
-cpu_autopilot: 1
-disable_adds: 1 (no mid-league pickups)
-```
+- **Re-Draft (1QB, PPR):** `max_keepers: 0`, `waiver_type: 1` (rolling)
+- **PPR Dynasty (FAAB):** `max_keepers: null`, `waiver_type: 0`
+- **Best-Ball:** `best_ball: 1`, `disable_adds: 1`
 
 ## Related
 

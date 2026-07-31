@@ -2,17 +2,21 @@
 
 The Sleeper Players API provides a complete list of NFL players with metadata: status, team, position, injury notes, and depth chart placement.
 
-## Endpoint
+## Quick Start
 
-* [Get All NFL Players](./endpoint.md) - Public endpoint returning all active NFL players keyed by Sleeper player ID.
+Cache daily and query locally: [Caching Strategy](./caching-strategy.md).
 
-## Schema & Reference
+## API Reference
 
-* [Player Object Schema](./player-schema.md) - Field definitions and types for individual player entries.
-* [NFL Position Abbreviations](./position-reference.md) - Standardized position codes (QB, RB, WR, TE, K, DEF, IDP).
-* [Player Status and Injury Codes](./status-reference.md) - Semantics of status and injury_status fields; when to exclude players from lineups.
+* [Get All NFL Players](./endpoint.md) - Public endpoint returning all players keyed by Sleeper player ID.
 
-## Implementation
+## Schema & Data Types
 
-* [Caching and Sync Strategy](./caching-strategy.md) - Best practices for caching the 5MB endpoint, update frequency, and stale-data detection.
-* [Player Data Storage in SQLite](./storage.md) - Schema, queries, and operations for storing and retrieving player data from local database.
+* [Player Object Schema](./player-schema.md) - Field definitions and types.
+* [Position Abbreviations](./position-reference.md) - Standard position codes (QB, RB, WR, TE, K, DEF, IDP).
+* [Status and Injury Codes](./status-reference.md) - Status and injury_status field semantics; eligibility rules.
+
+## Operations
+
+* [Caching and Sync Strategy](./caching-strategy.md) - Daily sync, stale data detection, 24-hour cache window.
+* [Player Data Storage](./storage.md) - Database schema and queries (DEPRECATED; see [Storage](/sleeper/storage.md)).

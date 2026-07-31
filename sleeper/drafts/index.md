@@ -1,25 +1,22 @@
 # Sleeper Drafts
 
-The Sleeper Drafts provides access to league draft listings, draft state, and round-by-round pick history.
+The Sleeper Drafts API provides access to league draft listings, draft state, and round-by-round pick history.
 
-## Data
+## Quick Start
 
-Always check for existing data in the database ([data/sleeper.db](../../data/sleeper.db)) before querying the Sleeper API.
+Always check the database first: [Storage](../storage.md) for querying existing draft data before hitting the API.
 
-Refer to [storage.md](../storage.md) to determine how to query the central database for draft information.
+## API Reference
 
-## Schema & Reference
+* [Draft Endpoints](./endpoint.md) - HTTP routes for drafts, picks, and traded picks.
 
-* [Draft Object Schema](./draft-schema.md) - Field definitions for draft metadata, timing, and configuration.
-* [Draft Pick Object Schema](./pick-schema.md) - Structure of individual picks, round/pick position, and keeper information.
-* [Draft Strategy and Type Reference](./draft-strategy.md) - Snake vs. linear draft ordering, positional value, and strategy notes.
+## Schema & Data Types
 
-## Endpoints
-
-* [Draft Endpoints](./endpoint.md) - HTTP routes for retrieving drafts, picks, and traded picks.
+* [Draft Object Schema](./draft-schema.md) - Metadata, timing, and configuration fields.
+* [Draft Pick Object Schema](./pick-schema.md) - Individual pick structure, round/pick position, keeper marks.
+* [Draft Strategy and Type Reference](./draft-strategy.md) - Snake vs. linear ordering, positional scarcity, strategic patterns.
 
 ## Related
 
-* [Players](../players/index.md) - player information used during draft selection.
-* [Leagues](../leagues/index.md) - league configuration for a draft.
-* [Storage](../storage.md) - information on how Sleeper data is stored
+* [Players](../players/index.md) - Player info used in draft selection.
+* [Leagues](../leagues/index.md) - League configuration for a draft.
