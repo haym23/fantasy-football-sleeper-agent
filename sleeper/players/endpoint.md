@@ -1,5 +1,5 @@
 ---
-type: APIEndpoint
+type: APIRef
 title: Get All NFL Players
 description: Public endpoint returning all active NFL players with metadata, keyed by Sleeper player ID.
 resource: https://api.sleeper.app/v1/players/nfl

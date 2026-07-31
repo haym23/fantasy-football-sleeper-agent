@@ -53,7 +53,7 @@ The field is unstructured. Common patterns:
 - `status` = `injured_reserve`, `out`, `suspended`, or `unknown`
 - `injury_status` = `Out` or `Doubtful` (if parsing)
 
-See the [lineup eligibility rules](/sleeper/leagues/lineup-eligibility.md) for rest of the policy.
+Always check the `status` field as the canonical source—it overrides all other signals.
 
 ## Update frequency
 
@@ -64,7 +64,6 @@ See the [lineup eligibility rules](/sleeper/leagues/lineup-eligibility.md) for r
 ## Related
 
 - [Player schema](/sleeper/players/player-schema.md) — field definitions.
-- [Lineup eligibility](/sleeper/leagues/lineup-eligibility.md) — how to filter eligible players for your lineup.
 
 ## Citations
 

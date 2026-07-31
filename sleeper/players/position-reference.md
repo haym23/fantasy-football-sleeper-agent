@@ -22,7 +22,7 @@ Fantasy football and Sleeper use standardized two-letter abbreviations for playi
 
 ## FLEX eligibility
 
-In the league's [scoring settings](/sleeper/leagues/scoring-settings.md), a FLEX or SUPER_FLEX slot typically allows any of `{RB, WR, TE}` or `{QB, RB, WR, TE}` respectively. Depth chart position (`depth_chart_position`) is more permissive — a RB listed at an unusual spot still counts as RB within the league.
+In a league with FLEX or SUPER_FLEX slots, those typically allow any of `{RB, WR, TE}` or `{QB, RB, WR, TE}` respectively. Depth chart position (`depth_chart_position`) is more permissive — a RB listed at an unusual spot still counts as RB within the league.
 
 ## Mapping to on-field positions
 
@@ -37,7 +37,6 @@ In the league's [scoring settings](/sleeper/leagues/scoring-settings.md), a FLEX
 ## Related
 
 - [Player schema](/sleeper/players/player-schema.md) — `position` and `depth_chart_position` fields.
-- [Lineup eligibility](/sleeper/leagues/lineup-eligibility.md) — how positions map to roster slots.
 
 ## Citations
 

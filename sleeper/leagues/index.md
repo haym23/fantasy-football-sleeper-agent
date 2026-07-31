@@ -18,4 +18,4 @@ The Sleeper Leagues API provides access to league configuration, rosters, matchu
 
 ## Implementation
 
-* [League Data Storage](./league-storage.md) - Schema, queries, and operations for storing leagues in SQLite.
+* [League Data Storage](../storage.md) - Schema, queries, and operations for storing leagues in SQLite.

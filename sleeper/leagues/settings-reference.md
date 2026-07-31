@@ -137,7 +137,6 @@ disable_adds: 1 (no mid-league pickups)
 
 - [League schema](/sleeper/leagues/league-schema.md) — Full League object.
 - [State reference](/sleeper/leagues/state-reference.md) — League lifecycle status.
-- [Query patterns](/sleeper/leagues/query-patterns.md#finding-league-type) — How to detect league type from settings.
 
 ## Citations
 

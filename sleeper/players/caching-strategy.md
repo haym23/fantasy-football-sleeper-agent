@@ -24,36 +24,19 @@ The Sleeper Players API returns ~5MB of data on every call. Fetching it live on 
 
 Trigger an immediate sync (overriding cache) when:
 
-- User explicitly requests it (e.g., `ff sync players`).
+- User explicitly requests it.
 - A known significant event occurred (trade deadline, playoff expansion, week 1 kickoff).
 - Stale data is detected (e.g., a player's `injury_status` contradicts the league's active roster).
 
 ## Detecting stale data
 
-If the cache was last updated more than 24 hours ago, flag operations that depend on current player status (lineups, free agent rankings). Do not silently use stale data; inform the user and offer a sync option. See [sync workflows](/sleeper/workflows/sync.md) for implementation.
+If the cache was last updated more than 24 hours ago, flag operations that depend on current player status (lineups, free agent rankings). Do not silently use stale data; inform the user and offer a sync option.
 
 ## Storage format
 
-**Option 1: JSON file** (simpler, human-readable)
-```
-data/
-└── sleeper_players_<date>.json    # e.g., sleeper_players_2026-01-21.json
-```
+We cache the entire NFL player roster directly in the unified database (**`data/sleeper.db`**) in the `players` table, which is fully queryable and integrates seamlessly with mock draft, league, and selection analysis.
 
-**Option 2: SQLite blob** (aligns with league DB, queryable)
-```sql
-CREATE TABLE player_cache (
-  player_id TEXT PRIMARY KEY,
-  full_name TEXT,
-  nfl_team TEXT,
-  position TEXT,
-  status TEXT,
-  -- ... other fields ...
-  cached_at TIMESTAMP
-);
-```
-
-Option 2 is recommended if the cache feeds frequent SQL queries; Option 1 is simpler if rare cache-misses are acceptable.
+Refer to **[Sleeper Central SQLite Storage](../storage.md)** for details on the SQLite tables, setup, and query examples.
 
 ## Cache invalidation
 

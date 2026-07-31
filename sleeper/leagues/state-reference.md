@@ -78,7 +78,6 @@ league.status == "complete"
 ## Related
 
 - [League schema](/sleeper/leagues/league-schema.md) — Full League object structure.
-- [Status reference query pattern](/sleeper/leagues/query-patterns.md#filtering-by-status) — How to filter leagues by state.
 
 ## Citations
 
