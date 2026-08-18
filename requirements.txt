@@ -1,0 +1,7 @@
+django
+django-ninja
+httpx
+openai
+feedparser
+pydantic
+black
