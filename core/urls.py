@@ -18,9 +18,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from football import views
 from football.api import api
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", api.urls),
+    path("", views.chat_page, name="chat"),
+    path("chat/send", views.chat_send, name="chat-send"),
+    path("players/", views.players_page, name="players"),
+    path("leagues/<str:league_id>/", views.league_page, name="league"),
 ]

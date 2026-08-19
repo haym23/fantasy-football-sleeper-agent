@@ -1,0 +1,11 @@
+{% extends "football/base.html" %}
+{% block content %}
+<h1>Chat</h1>
+<p class="muted">Ask about your leagues, rosters, waivers, or player news.</p>
+<div id="messages"></div>
+<form hx-post="{% url 'chat-send' %}" hx-target="#messages" hx-swap="beforeend" hx-on::after-request="this.reset()">
+  {% csrf_token %}
+  <input type="text" name="message" placeholder="Who should I pick up this week?" required autofocus style="width: 80%">
+  <button type="submit">Send</button>
+</form>
+{% endblock %}

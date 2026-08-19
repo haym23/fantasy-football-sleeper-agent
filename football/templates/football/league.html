@@ -1,0 +1,23 @@
+{% extends "football/base.html" %}
+{% block content %}
+<h1>{{ league.name }} ({{ league.season }})</h1>
+<p class="muted">Status: {{ league.status }} · {{ league.total_rosters }} rosters · league_id {{ league.league_id }}</p>
+<p class="muted">Seasons: {% for l in leagues %}{% if l.league_id != league.league_id %}<a href="{% url 'league' l.league_id %}">{{ l.season }}</a> {% endif %}{% endfor %}</p>
+
+<h2>Recent transactions</h2>
+<table>
+  <tr><th>Date</th><th>Type</th><th>Added</th><th>Dropped</th></tr>
+  {% for t in transactions %}
+  <tr>
+    <td>{{ t.date }}</td><td>{{ t.type }}</td>
+    <td>{% for name, roster in t.added.items %}{{ name }}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+    <td>{% for name, roster in t.dropped.items %}{{ name }}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+<h2>Latest news</h2>
+{% for n in news %}
+<p><strong>{{ n.headline }}</strong><br><span class="muted">{{ n.source }} · {{ n.published_at|date:"M d" }}</span></p>
+{% endfor %}
+{% endblock %}
