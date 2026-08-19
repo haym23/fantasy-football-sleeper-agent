@@ -191,6 +191,7 @@ def sync_news() -> int:
     for source, feed_url in settings.NEWS_FEEDS.items():
         for entry in feedparser.parse(feed_url).entries:
             if not entry.get("link") or NewsItem.objects.filter(url=entry.link).exists():
+                log.warning(f"Could not find link for entry: {entry.title}")
                 continue
             text = f"{entry.get('title', '')} {entry.get('summary', '')}".lower()
             player_id = next((pid for name, pid in name_map.items() if name in text), None)
